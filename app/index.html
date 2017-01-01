@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap使用技巧</title>
+  <!-- build:css css/index.min.css -->
+  <link rel="stylesheet" href="css/libs/normalize.css">
+  <link rel="stylesheet" href="css/libs/bs-grid.css">
+  <link rel="stylesheet" href="css/libs/bs-forms.css">
+  <link rel="stylesheet" href="css/libs/bs-buttons.css">
+  <link rel="stylesheet" href="css/libs/bs-modal.css">
+  <link rel="stylesheet" href="css/libs/utilities.css">
+  <!-- endbuild -->
+</head>
+<body class="container">
+  <h2>创建模态框</h2>
+  <button id="loginBtn" class="btn btn-default" data-toggle="modal"
+    data-target="#loginModal" data-remote="login.html">登录
+  </button>
+  <form class="modal fade" id="loginModal" tabindex="-1"
+    role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content"></div>
+    </div>
+  </form>
+  <!-- build:js js/index.min.js -->
+  <script src="js/libs/jquery.js"></script>
+  <script src="js/libs/bs-modal.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

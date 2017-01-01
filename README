@@ -1,0 +1,18 @@
+本实例包括了以下bootstrap使用技巧。
+
+1. 模态框动态添加内容
+2. 模态框垂直居中
+3. 自定义确认框
+4. 表单验证
+5. 下拉菜单选中
+
+Demo: https://szriafan.github.io/bootstrap-tips/app
+
+部署
+
+1. 安装nodejs: https://nodejs.org/en/
+2. 打开命令行程序，切换到当前工程的根路径
+3. > npm install安装grunt及插件
+4. > grunt将app中的文件合并压缩后打包到dist文件夹中
+
+最终分发dist文件夹的文件
