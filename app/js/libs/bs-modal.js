@@ -41,7 +41,8 @@
   Modal.DEFAULTS = {
     backdrop: true,
     keyboard: true,
-    show: true
+    show: true,
+    middle: true
   }
 
   Modal.prototype.toggle = function (_relatedTarget) {
@@ -141,8 +142,8 @@
       .off('focusin.bs.modal') // guard against infinite focus loop
       .on('focusin.bs.modal', $.proxy(function (e) {
         if (document !== e.target &&
-          this.$element[0] !== e.target &&
-          !this.$element.has(e.target).length) {
+            this.$element[0] !== e.target &&
+            !this.$element.has(e.target).length) {
           this.$element.trigger('focus')
         }
       }, this))
@@ -241,12 +242,23 @@
   }
 
   Modal.prototype.adjustDialog = function () {
-    var modalIsOverflowing = this.$element[0].scrollHeight > document.documentElement.clientHeight;
+    var modalIsOverflowing = this.$element[0].scrollHeight > document.documentElement.clientHeight
 
     this.$element.css({
       paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
-      paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : '',
+      paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : ''
     })
+
+    var that = this;
+    setTimeout(function(){
+      that.verticalMiddle()
+    }, 10);
+  }
+
+  Modal.prototype.verticalMiddle = function () {
+    if (this.options.middle) {
+      this.$element.css('padding-top', (document.documentElement.clientHeight - this.$dialog.height()) / 2);
+    }
   }
 
   Modal.prototype.resetAdjustments = function () {
