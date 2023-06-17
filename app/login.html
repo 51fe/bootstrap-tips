@@ -7,13 +7,15 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">邮箱</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="请输入邮箱">
+        <input type="email" class="form-control" id="email" name="email" placeholder="请输入邮箱"
+          data-rule-required="true" data-rule-email="true" data-msg-email="电子邮件地址不合法">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="pwd">密码</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="pwd" placeholder="请输入密码">
+        <input type="password" class="form-control" id="pwd" name="pwd" placeholder="请输入密码"
+          data-rule-required="true" data-rule-minlength="6">
       </div>
     </div>
     <div class="form-group">

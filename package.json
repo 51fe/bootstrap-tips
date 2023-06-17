@@ -1,7 +1,7 @@
 {
-  "name": "mLab",
+  "name": "bootstrap-tips",
   "version": "1.0.0",
-  "description": "CRUD sample with mLab",
+  "description": "bootstrap tips",
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -15,10 +15,10 @@
     "grunt-usemin": "^3.1.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "grunt"
   },
   "keywords": [
-    "mLab, CRUD"
+    "bootstrap"
   ],
   "author": "Flying",
   "license": "ISC"
